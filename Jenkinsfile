@@ -5,14 +5,33 @@ pipeline {
         }
     }
     stages {
-        stage("Hello"){
+        stage("Build"){
             steps{
-                echo("Halo")
+                echo("Ini Build")
+            }
+        }
+        stage("Test"){
+            steps{
+                echo("Ini Test")
+            }
+        }
+        stage("Deploy"){
+            steps{
+                echo("Ini Deploy")
             }
         }
     }
     post{
         always{
+            echo "done"
+        }
+        succes{
+            echo "done"
+        }
+        failure{
+            echo "done"
+        }
+        cleanup{
             echo "done"
         }
     }
