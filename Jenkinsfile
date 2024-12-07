@@ -7,12 +7,16 @@ pipeline {
     stages {
         stage("Build"){
             steps{
-                echo("Ini Build")
+                echo("Build")
+                sh("./mvnw clean compile test-compile")
+                echo("Finish Build")
             }
         }
         stage("Test"){
             steps{
-                echo("Ini Test")
+                echo("Test")
+                sh("./mvnw test")
+                echo("Finish Test")
             }
         }
         stage("Deploy"){
