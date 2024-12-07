@@ -18,6 +18,7 @@ pipeline {
         stage("Deploy"){
             steps{
                 echo("Ini Deploy")
+                sh(fail)
             }
         }
     }
