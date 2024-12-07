@@ -21,8 +21,11 @@ pipeline {
         }
         stage("Deploy"){
             steps{
-                echo("Ini Deploy")
-                sleep(20)
+                script{
+                    for (int i=0; i < 10; i++) {
+                        echo("Script ${i}")
+                    }
+                }
             }
         }
     }
