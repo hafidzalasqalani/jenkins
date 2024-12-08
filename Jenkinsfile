@@ -19,7 +19,7 @@ pipeline {
                         "firstName": "depan",
                         "lastName": "belakang"
                     ]
-                    writeJson(file: "data.json", json: data)
+                    writeJSON(file: "data.json", json: data)
                 }
 
                 echo("Test")
