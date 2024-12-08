@@ -1,9 +1,4 @@
 pipeline {
-    // agent {
-    //     node {
-    //         label "linux && java17"
-    //     }
-    // }
     stages {
         stage("Build"){
                 agent {
