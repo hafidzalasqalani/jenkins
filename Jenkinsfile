@@ -11,6 +11,7 @@ pipeline {
         }
     }
             steps{
+                echo("Author ${AUTHOR}")
                 echo("Start job : ${env.JOB_NAME}")
                 echo("Start build : ${env.BUILD_NUMBER}")
                 echo("Start Name : ${env.BRANCH_NAME}")
